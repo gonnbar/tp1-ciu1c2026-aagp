@@ -1,26 +1,27 @@
 import { Button,Card,CardBody } from "react-bootstrap";
 import { Link } from "react-router";
+import './ProductCard.css'
 
 function ProductCard({producto}) {
   return(
-      <Card className="card border-0 bg-transparent shadow-none" style={{padding:'1rem'}}>
+      <Card className="custom-card cardEstilo">
         <Card.Img src={producto.imagen} lass="card-img-top" style={{height:'250px',width:"100%",objectFit: 'contain'}}></Card.Img>
       <Card.Body>
-        <Card.Title variant = "" className="primary">{producto.nombre}</Card.Title>
-        <Card.Subtitle className ={'mb-2 text-muted'}>{producto.categoria}</Card.Subtitle>
-        <Card.Text>${producto.precio}</Card.Text>
+        <Card.Title className="primary">{producto.nombre}</Card.Title>
+        <Card.Subtitle  className ={'mb-2 text-muted'}>{producto.categoria}</Card.Subtitle>
+        <Card.Text >${producto.precio}</Card.Text>
       </Card.Body>
     {
       producto.stock > 0?(
         <Card.Footer className="d-flex gap-2 card border-0 bg-transparent shadow-none">
-          <Button className="btn-primary-custom"> Agregar al carrito </Button>
-          <Button as={Link} to={`/products/${producto.id}`}>Ver Detalle</Button>
+          <Button className="btn btn-primary-custom"> Agregar al carrito </Button>
+          <Button className="btn btn-secondary-custom" as={Link} to={`/products/${producto.id}`}>Ver Detalle</Button>
         </Card.Footer>
       )
       :(
         <Card.Footer className="d-flex gap-2 card border-0 bg-transparent shadow-none">
-                   <Button className="btn:disabled">Agregar al carrito</Button>
-                   <Button as={Link} to={`/products/${producto.id}`}>Ver Detalle</Button>
+                   <Button className="btn btn-primary-custom" disabled >Sin Stock</Button>
+                   <Button className="btn btn-secondary-custom" as={Link} to={`/products/${producto.id}`}>Ver Detalle</Button>
               </Card.Footer>
       )
     }

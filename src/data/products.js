@@ -84,7 +84,7 @@ export const products = [
         precio: 29000,
         imagen: principe,
         descripcion: "Jude tenía siete años cuando sus padres fueron asesinados y, junto con sus dos hermanas, fue trasladada a la traicionera Corte Suprema del Faerie. Diez años más tarde, lo único que Jude desea, a pesar de ser una simple mortal, es sentir que pertenece a ese lugar. Pero la mayoría de los seres feéricos desprecian a los humanos. Especialmente el príncipe Cardan, el hijo más joven y perverso del rey supremo. Para hacerse un hueco en la corte, Jude deberá enfrentarse a él. Y afrontar las consecuencias. Como resultado, se verá envuelta en una red de intrigas entre inmortales, y descubrirá su propia habilidad para el derramamiento de sangre.",
-        stock: 0,
+        stock: 2,
     },
      {
         id: 9 ,
@@ -93,7 +93,7 @@ export const products = [
         precio: 39000,
         imagen: powerles,
         descripcion: "Solo lo extraordinario pertenece al reino de Ilya: los excepcionales, los poderosos, los élites. Aquellos que nacieron vulgares son solo eso: vulgares. Y cuando el rey decreta que todos los vulgares serán eliminados para preservar su sociedad de élite, carecer de poder se vuelve un crimen, lo cual convierte a Paedyn Gray en una criminal por destino y en una ladrona por necesidad. Finge ser psíquica en la ciudad real, y pasa desapercibida para seguir viva y fuera de peligro. Cuando Paedyn inesperadamente salva a uno de los príncipes de Ilya, se ve arrojada a las Pruebas de la Purga. La brutal competición existe para exhibir los poderes de los élites, algo de lo que Paedyn carece. Si la Purga y sus rivales no la matan, lo hará el príncipe cuando descubra lo que ella es en realidad...",
-        stock: 10,
+        stock: 0,
     },
     {
         id: 10 ,
