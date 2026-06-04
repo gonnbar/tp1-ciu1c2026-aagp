@@ -55,6 +55,7 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
 }
 
 /* Utilidades de texto */
@@ -74,33 +75,48 @@ img {
 /* Botones globales */
 
 .btn.btn-primary-custom {
-  background-color: var(--color-primary);
-  border-color: var(--color-primary);
-  color: white;
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: white !important;
+  transition: all 0.2s ease-in-out;
 }
 
-.btn-primary-custom:hover,
-.btn-primary-custom:focus {
-  background-color: var(--color-primary-hover);
-  border-color: var(--color-primary-hover);
-  color: white;
+.btn.btn-primary-custom:hover {
+  background-color: var(--color-primary-hover) !important;
+  border-color: var(--color-primary-hover) !important;
+  color: white !important;
 }
 
-.btn-secondary-custom {
-  background-color: var(--color-secondary);
-  border-color: var(--color-secondary);
-  color: var(--color-text);
+.btn.btn-primary-custom:focus,
+.btn.btn-primary-custom:active {
+  background-color: var(--color-primary-hover) !important;
+  border-color: var(--color-primary-hover) !important;
+  box-shadow: none !important;
 }
 
-.btn-secondary-custom:hover,
-.btn-secondary-custom:focus {
+.btn.btn-secondary-custom {
+  background-color: var(--color-secondary) !important;
+  border-color: var(--color-secondary) !important;
+  color: var(--color-text) !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn.btn-secondary-custom:hover {
   filter: brightness(0.95);
 }
 
-.btn:disabled {
-  background-color: var(--color-disabled);
-  border-color: var(--color-disabled);
-  cursor: not-allowed;
+.btn.btn-secondary-custom:focus,
+.btn.btn-secondary-custom:active {
+  box-shadow: none !important;
+}
+
+.btn:disabled,
+.btn.disabled {
+  background-color: var(--color-disabled) !important;
+  border-color: var(--color-disabled) !important;
+  color: #fff !important;
+  opacity: 0.7 !important;
+  cursor: not-allowed !important;
 }
 
 /* Elementos generales */
@@ -124,20 +140,25 @@ a {
 /* Cards reutilizables */
 
 .custom-card {
-  background-color: var(--color-card);
-  border: none;
+  background-color: var(--color-card) !important;
+  border: none !important;
   border-radius: 15px;
   box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-2px);
 }
 
 /* Layout */
 
 .page-container {
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
 
 .section-spacing {
-  margin: 3rem 0;
+  margin: 2rem 0;
 }
 
 /* Títulos */
