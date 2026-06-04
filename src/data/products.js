@@ -34,7 +34,7 @@ export const products = [
     },
      {
         id:3 ,
-        nombre: "Una corte de rosas y espinas",
+        nombre: "Rosas y Espinas",
         categoria: "Fantasia",
         precio: 30000,
         imagen: acotar,

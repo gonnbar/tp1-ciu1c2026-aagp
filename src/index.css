@@ -73,7 +73,7 @@ img {
 
 /* Botones globales */
 
-.btn-primary-custom {
+.btn.btn-primary-custom {
   background-color: var(--color-primary);
   border-color: var(--color-primary);
   color: white;
