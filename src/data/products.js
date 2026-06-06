@@ -16,7 +16,7 @@ export const products = [
         id: 1,
         nombre: "1984",
         autor: "George Orwell",
-        descripcion: "En una sociedad dominada por el Gran Hermano, Winston Smith intenta resistirse al control absoluto del Estado. Esta clásica novela distópica aborda la vigilancia, la manipulación de la verdad y la pérdida de la libertad individual.",
+        descripcion: "La guerra es la paz, la libertad es la esclavitud, la ignorancia es la fuerza.La obra 1984, más que una novela de ficción es una profecía, que describe una sociedad sometida, mediante un Estado totalitario que reprime y controla cada aspecto de la vida de las personas mediante el uso de tecnologías y policías del pensamiento. Todo está absolutamente estructurado y planificado desde la cúpula que gobierna, el individuo es obligado a acatar la doctrina del régimen mediante el miedo, la ignorancia y la mentira. Esta sociedad es gobernada bajo el invisible y omnipotente Gran Hermano, a quien solo se le ve mediante telepantallas, las cuales son usadas para la propaganda del único partido gobernante, el INSOG. El Estado todo lo ve y todo lo sabe.",
         categoria: "Ficción",
         precio: 17900,
         stock: 2,
@@ -129,7 +129,7 @@ export const products = [
         categoria: "Thriller",
         precio: 40000,
         imagen: debbie,
-        descripcion: "De la autora superventas del fenómeno internacional La asistenta, llega un inquietante y provocador thriller sobre una mujer que ya no está dispuesta a callar, y va a hacer justicia... cueste lo que cueste.   Debbie Mullen está al límite. Durante años ha ofrecido útiles y juiciosos consejos en su columna semanal, «Querida Debbie», a la que las mujeres de Nueva Inglaterra acuden en busca de empatía y sabiduría cotidiana.   Gracias a su trabajo ha escuchado a innumerables esposas ignoradas, menospreciadas o incluso maltratadas por sus maridos. Y Debbie siempre hace lo posible por guiarlas en la dirección correcta. O, al menos, lo hacía. Últimamente, su vida está fuera de control. Acaba de perder su trabajo. Algo raro está ocurriendo con sus hijas adolescentes. Y su marido guarda secretos, o eso parece a juzgar por la aplicación de geolocalización que ella misma ha instalado en su celular. Pero Debbie ya está harta de hacer lo moralmente correcto. Harta de ser sensata y práctica. Ha llegado el momento de seguir sus propios consejos.",
+        descripcion: "De la autora superventas del fenómeno internacional La asistenta, llega un inquietante y provocador thriller sobre una mujer que ya no está dispuesta a callar, y va a hacer justicia... cueste lo que cueste.   Debbie Mullen está al límite. Durante años ha ofrecido útiles y juiciosos consejos en su columna semanal, «Querida Debbie», a la que las mujeres de Nueva Inglaterra acuden en busca de empatía y sabiduría cotidiana. ",
         stock: 10,
     }
 ];

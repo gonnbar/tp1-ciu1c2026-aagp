@@ -9,7 +9,7 @@ function ProductCard({producto}) {
       <Card.Body>
         <Card.Title className="primary">{producto.nombre}</Card.Title>
         <Card.Subtitle  className ={'mb-2 text-muted'}>{producto.categoria}</Card.Subtitle>
-        <Card.Text >${producto.precio}</Card.Text>
+        <Card.Text className="price">${producto.precio}</Card.Text>
       </Card.Body>
     {
       producto.stock > 0?(
