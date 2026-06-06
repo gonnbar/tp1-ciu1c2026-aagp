@@ -1,0 +1,16 @@
+.subtitulo{
+    text-align: center;
+}
+.contenedorSinopsis{
+    padding: 2rem;
+}
+.estiloBotones{
+    width: 40%;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+.precioDetalles{
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;    
+}

@@ -15,13 +15,13 @@ function ProductCard({producto}) {
       producto.stock > 0?(
         <Card.Footer className="d-flex gap-2 card border-0 bg-transparent shadow-none">
           <Button className="btn btn-primary-custom"> Agregar al carrito </Button>
-          <Button className="btn btn-secondary-custom" as={Link} to={`/products/${producto.id}`}>Ver Detalle</Button>
+          <Button className="btn btn-secondary-custom" as={Link} to={`/product/${producto.id}`}>Ver Detalle</Button>
         </Card.Footer>
       )
       :(
         <Card.Footer className="d-flex gap-2 card border-0 bg-transparent shadow-none">
                    <Button className="btn btn-primary-custom" disabled >Sin Stock</Button>
-                   <Button className="btn btn-secondary-custom" as={Link} to={`/products/${producto.id}`}>Ver Detalle</Button>
+                   <Button className="btn btn-secondary-custom" as={Link} to={`/product/${producto.id}`}>Ver Detalle</Button>
               </Card.Footer>
       )
     }

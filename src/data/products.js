@@ -35,6 +35,7 @@ export const products = [
      {
         id:3 ,
         nombre: "Rosas y Espinas",
+        autor: "Sarah J. Maas",
         categoria: "Fantasia",
         precio: 30000,
         imagen: acotar,
@@ -44,6 +45,7 @@ export const products = [
      {
         id:4 ,
         nombre: "King makers",
+        autor: "Sophie Lark",
         categoria: "Romance",
         precio: 42000,
         imagen: kingMaker,
@@ -53,6 +55,7 @@ export const products = [
     {
         id:5 ,
         nombre: "Wolfsong",
+        autor: "TJ Klune",
         categoria: "Fantasia",
         precio: 19000,
         imagen: wolf,
@@ -62,6 +65,7 @@ export const products = [
     {
         id:6 ,
         nombre: "Una luna sin miel",
+        autor: "Christina Lauren",
         categoria: "Romance",
         precio: 35000,
         imagen: luna,
@@ -71,6 +75,7 @@ export const products = [
     {
         id: 7 ,
         nombre: "Amor y otras palabras",
+        autor: "Christina Lauren",
         categoria: "Romance",
         precio: 38000,
         imagen: loveWords,
@@ -80,6 +85,7 @@ export const products = [
     {
         id: 8 ,
         nombre: "El principe cruel",
+        autor: "Holly Black",
         categoria: "Fantasia",
         precio: 29000,
         imagen: principe,
@@ -89,6 +95,7 @@ export const products = [
      {
         id: 9 ,
         nombre: "Powerless",
+        autor: "Lauren Roberts",
         categoria: "Fantasia",
         precio: 39000,
         imagen: powerles,
@@ -98,6 +105,7 @@ export const products = [
     {
         id: 10 ,
         nombre: "Los seis de atlas",
+        autor: "Olivia Black",
         categoria: "Fantasia",
         precio: 39500,
         imagen: atlas,
@@ -107,6 +115,7 @@ export const products = [
    {
         id: 11 ,
         nombre: "La paciente silenciosa",
+        autor: "Alex Michaelides",
         categoria: "Thriller",
         precio: 20000,
         imagen: paciente,
@@ -116,6 +125,7 @@ export const products = [
     {
         id: 12 ,
         nombre: "Querida Debbie ",
+        autor: "Freida Mcfadden",
         categoria: "Thriller",
         precio: 40000,
         imagen: debbie,
