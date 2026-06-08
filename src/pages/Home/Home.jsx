@@ -121,7 +121,7 @@ function Home() {
         <section className="featured-books">
 
           <div className="section-title-wrapper">
-            <h2>Libros destacados</h2>
+            <h2>Los más vendidos</h2>
             <hr className="title-divider" />
           </div>
 
