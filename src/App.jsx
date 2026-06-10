@@ -11,18 +11,20 @@ import Contact from "./pages/Contact/Contact";
 import About from "./pages/About/About";
 
 // carrito
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CartContext, estadoCart } from "./context/CartContext";
-// PRUEBA CARRITO
-//import { products } from "./data/products.js";
+
 
 
 function App() {
-  //carrito
-  const [cart, setCart] = useState([
-  // PRUEBA CARRITO { ...products[0], cantidad: 1 }, 
-  //{ ...products[1], cantidad: 1 } 
-  ]);
+  //carrito con localStorage
+  const [cart, setCart] = useState( () => {
+    const carritoGuardado = localStorage.getItem("carritoItems")
+    return carritoGuardado ? JSON.parse(carritoGuardado) : [];
+  });
+  useEffect( () => {
+    localStorage.setItem("carritoItems", JSON.stringify(cart))
+  }, [cart]);
 
   return (
     <>
