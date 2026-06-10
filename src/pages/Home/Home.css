@@ -1,155 +1,131 @@
-.home-container {
-  padding: 2rem 0;
+/* HERO */
+
+.hero-banner {
+  height: 80vh;
+  min-height: 550px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
-.hero {
-  text-align: center;
-  margin-bottom: 8rem;
-}
-
-.home-logo {
-  height: 120px;
-  width: auto;
-  margin: 0 auto 1rem;
-}
-
-.hero-description {
-  max-width: 700px;
-  margin: 1rem auto 2rem;
-  font-size: 1.1rem;
-  color: var(--color-text);
-}
-
-.banner-section {
-  width: 100%;
-}
-
-.home-banner {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 5rem;
-}
-
-.home-features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 5rem;
-}
-
-.feature-card {
-  padding: 2rem;
-  text-align: center;
-}
-
-.home-categories {
-  margin-bottom: 5rem;
-}
-
-.home-categories h2 {
-  margin-bottom: 1.5rem;
-  color: var(--color-text);
-}
-
-.categories-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-}
-
-.category-card {
-  padding: 3rem 1rem;
-  text-align: center;
-  cursor: pointer;
-}
-
-.category-card:hover {
-  transform: translateY(-4px);
-}
-
-.home-cta {
-  text-align: center;
-  padding: 3rem;
-  margin-top: 4rem;
-  margin-bottom: 2rem;
+.hero-overlay {
   background: linear-gradient(
-    180deg,
-    var(--color-surface),
-    #f3eee5
+    to right,
+    rgba(0,0,0,0.05),
+    rgba(0,0,0,0.30)
   );
-  border: 1px solid var(--color-border);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.home-cta h2 {
+.hero-content {
+  margin-left: auto;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  text-align: left;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  line-height: 1.05;
+  font-weight: 700;
+  text-align: left;
+  color: white;
   margin-bottom: 1rem;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.25);
 }
 
-.home-cta p {
-  margin-bottom: 1.5rem;
+.hero-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  width: fit-content;
+  padding: 1rem 2rem !important;
+  border-radius: 0 !important;
+  background-color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  color: var(--color-text) !important;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all var(--transition-fast);
 }
 
-/* Títulos y líneas divisorias */
+.hero-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.hero-btn svg {
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.hero-btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* TITULOS DE SECCION */
 
 .section-title-wrapper {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .section-title-wrapper h2 {
-  margin-bottom: 0.5rem;
   font-size: 2.4rem;
   font-weight: 700;
-  color: var(--color-text);
+  margin-bottom: 0.5rem;
 }
 
 .title-divider {
-  width: 30px;
+  width: 80px;
   height: 2px;
-  background-color: var(--color-accent); 
   border: none;
+  background-color: var(--color-accent);
   margin: 0 auto;
   opacity: 1;
 }
 
-/* Íconos circulares de las cards */
+/* CATEGORIAS */
 
-.icon-circle {
-  background-color: var(--color-accent);
-  color: var(--color-text);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  margin: 0 auto 1.5rem auto;
+.home-categories {
+  padding: 4.5rem 0;
+  background-color: var(--color-surface);
 }
 
-/* Categorías */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
 
 .category-card {
-  padding: 0; 
+  min-height: 340px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
   background-size: cover;
   background-position: center;
-  min-height: 250px;
-  display: flex;
-  transition: transform .3s ease;
   cursor: pointer;
 }
 
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
 .category-overlay {
-  background: rgba(0, 0, 0, 0.55);
   width: 100%;
   height: 100%;
+  background: rgba(0, 0, 0, 0.3);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
-  color: white;
   transition: background 0.3s ease;
 }
 
@@ -157,35 +133,16 @@
   background: rgba(0, 0, 0, 0.65);
 }
 
-.category-card:hover {
-  transform: translateY(-5px);
-}
-
-.category-card:hover img {
-  transform: scale(1.05);
-}
-
-.category-card:hover h4 {
-  color: var(--color-accent);
-}
-
 .category-overlay h4 {
   color: white;
   font-size: 2rem;
-  margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
-.category-desc {
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-  color: rgba(255,255,255,0.9);
-}
-
-/* Destacados */
+/* LIBROS DESTACADOS */
 
 .featured-books {
-  margin: 5rem 0;
+  padding: 4.5rem 0;
 }
 
 .featured-grid {
@@ -211,48 +168,75 @@
 }
 
 .featured-content h4 {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
-/* CTA */
+/* about */
 
-.cta-flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-align: left;
-  padding: 2rem 3rem;
-  gap: 2rem;
-  flex-wrap: wrap; 
-  max-width: 900px; 
-  margin: 4rem auto 2rem auto;
+.about-section {
+  padding: 4.5rem 0;
+  background-color: var(--color-surface);
 }
 
-.cta-flex h2, .cta-flex p {
-  margin-bottom: 0; 
+.about-text h2 {
+  margin-bottom: 1rem;
 }
 
-.cta-center-text {
-  flex: 1;
+.about-text p {
+  color: var(--color-text);
+  opacity: 0.75;
 }
 
-.cta-icon {
-  font-size: 3.5rem;
-  color: var(--color-accent);
+.about-image {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
 }
+
+/* CTA FINAL */
+
+.home-cta {
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 4.5rem 0;
+  text-align: center;
+}
+
+.home-cta h2 {
+  margin-bottom: 1rem;
+}
+
+.home-cta p {
+  margin-bottom: 2rem;
+}
+
+/* RESPONSIVE */
 
 @media (max-width: 768px) {
-  .cta-flex {
-    flex-direction: column;
+  .home-banner {
+    min-height: 350px;
+  }
+
+  .hero-content {
+    margin: 0 auto;
     text-align: center;
+    align-items: center;
   }
-  .cta-flex h2 {
-    margin-bottom: 0.5rem;
+
+  .hero-content h1 {
+    text-align: center;
+    font-size: 2.5rem;
   }
-  .cta-flex p {
-    margin-bottom: 1rem;
+
+  .hero-btn {
+    align-self: center;
   }
+
   .section-title-wrapper h2 {
     font-size: 1.8rem;
+  }
+
+  .category-card {
+    min-height: 260px;
   }
 }
