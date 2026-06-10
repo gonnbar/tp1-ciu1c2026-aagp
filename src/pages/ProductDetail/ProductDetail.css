@@ -1,0 +1,24 @@
+.subtitulo{
+    text-align: center;
+}
+.contenedorSinopsis{
+    padding: 2rem;
+}
+.estiloBotones{
+    width: 40%;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+.precioDetalles{
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;    
+}
+.stockProducto{
+    text-align: center;
+}
+.buttonSinStock{
+    background-color: gray !important;
+    border-color: gray !important;
+    cursor: not-allowed !important;
+}
