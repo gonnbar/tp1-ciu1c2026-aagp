@@ -9,20 +9,35 @@ import Cart from "./pages/Cart/Cart";
 import Contact from "./pages/Contact/Contact";
 import About from "./pages/About/About";
 
+// carrito
+import { useState } from "react";
+import { CartContext, estadoCart } from "./context/CartContext";
+// PRUEBA CARRITO
+//import { products } from "./data/products.js";
+
+
 function App() {
+  //carrito
+  const [cart, setCart] = useState([
+  // PRUEBA CARRITO { ...products[0], cantidad: 1 }, 
+  //{ ...products[1], cantidad: 1 } 
+  ]);
+
   return (
     <>
       <Navbar />
 
       <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/product/:id" element={<ProductDetail />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
+        <CartContext.Provider value={{ cart, ...estadoCart(cart, setCart) }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/product/:id" element={<ProductDetail />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </CartContext.Provider>
       </main>
       
       <Footer />
