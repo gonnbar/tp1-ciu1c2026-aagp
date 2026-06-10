@@ -1,0 +1,27 @@
+.custom-navbar {
+  position: sticky !important;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--color-navbar);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+
+.custom-navbar .nav-link,
+.custom-navbar .navbar-brand {
+  color: var(--color-text) !important;
+}
+
+.custom-navbar .nav-link:hover {
+  color: var(--color-accent) !important;
+}
+
+.custom-navbar .nav-link.active {
+  color: var(--color-accent) !important;
+  font-weight: 600;
+}
+
+.navbar-logo {
+  height: 60px;
+  width: auto;
+}

@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router";
 import './App.css';
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import Topbar from "./components/Topbar/Topbar";
 import Home from "./pages/Home/Home";
 import Products from "./pages/Products/Products";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
@@ -25,6 +26,8 @@ function App() {
 
   return (
     <>
+      <Topbar />
+
       <Navbar />
 
       <main>

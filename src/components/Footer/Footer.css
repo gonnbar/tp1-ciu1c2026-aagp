@@ -1,0 +1,120 @@
+.custom-footer {
+  background-color: var(--color-navbar);
+  color: white;
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 2rem;
+}
+
+/* cada columna */
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-section:last-child {
+  align-items: flex-end;
+}
+
+/* links */
+
+.footer-section a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: var(--color-accent);
+}
+
+/* botón arrepentimiento */
+
+.refund-btn {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+}
+
+/* iconos y logo */
+
+.footer-section svg {
+  font-size: 1.5rem;
+}
+
+.footer-section a:hover svg {
+  transform: scale(1.1);
+}
+
+.footer-section svg {
+  transition: transform 0.2s ease;
+}
+
+.footer-section small {
+  color: #666;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.social-icons a {
+  color: var(--color-text);
+  font-size: 1.8rem;
+  transition: all 0.2s ease;
+}
+
+.social-icons a:hover {
+  color: var(--color-accent);
+  transform: scale(1.1);
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-brand span {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.footer-logo {
+  height: 50px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-section {
+    align-items: center;
+  }
+
+  .footer-brand {
+    justify-content: center;
+  }
+
+  .footer-section:last-child {
+    align-items: center;
+  }
+
+}
