@@ -22,10 +22,10 @@ function ProductDetail() {
                     )
                     :
                     (
-                        <Card.Text className='stockProducto'>¡No hay mas stock de este producto!</Card.Text>
+                        <Card.Text className='stockProducto accent'>¡No hay mas stock de este producto!</Card.Text>
                     )}
                         <Container className="d-flex gap-3 justify-content-center">
-                        <Button className="btn btn-primary-custom estiloBotones"> Agregar al carrito </Button>
+                        <Button className= "buttonSinStock estiloBotones"> Sin Stock </Button>
                         <Button className="btn btn-secondary-custom estiloBotones" as={Link} to={`/products`}>Volver</Button>
                         </Container>
 

@@ -1,3 +1,8 @@
 .cardEstilo{
     margin: 1rem;
 }
+.estiloBotonSinStock{
+    background-color: gray !important;
+    border-color: gray !important;
+    cursor: not-allowed !important;
+}

@@ -20,7 +20,7 @@ function ProductCard({producto}) {
       )
       :(
         <Card.Footer className="d-flex gap-2 card border-0 bg-transparent shadow-none">
-                   <Button className="btn btn-primary-custom" disabled >Sin Stock</Button>
+                   <Button className="estiloBotonSinStock">Sin Stock</Button>
                    <Button className="btn btn-secondary-custom" as={Link} to={`/product/${producto.id}`}>Ver Detalle</Button>
               </Card.Footer>
       )
