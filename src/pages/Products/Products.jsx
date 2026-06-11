@@ -5,7 +5,6 @@ import { useSearchParams } from 'react-router';
 import { useState } from 'react';
 import Filters from '../../components/Filters/Filters';
 import SearchBar from "../../components/SearchBar/SearchBar";
-import "./Products.css";
 
 function Products() {
     const [searchParams] = useSearchParams()
