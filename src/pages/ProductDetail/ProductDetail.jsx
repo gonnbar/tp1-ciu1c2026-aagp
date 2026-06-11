@@ -5,11 +5,6 @@ import './ProductDetail.css'
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 
-/*
-    BUSCAR UNA MANERA DE PONER LOS TEXTOS PARA VISUALIZAR PRODUCTOS
-    - <Card.Text className='stockProducto accent'>¡No hay mas stock de este producto!</Card.Text>
-    - <Card.Text className='stockProducto accent'>¡Solo quedan {product.stock} en stock!</Card.Text>
-*/
 function ProductDetail() {
    const {id} = useParams();
    const {agregarProducto} = useContext(CartContext)
@@ -24,10 +19,10 @@ function ProductDetail() {
                 <Col md={8}>
                     <Card.Body>
                        <Card.Title style={{fontSize:'2rem',textAlign:'center'}}>{product.nombre} - {product.autor}</Card.Title>
-                       <Card.Text className='precioDetalles'> ${product.precio}</Card.Text>
+                       <Card.Text className='precioDetalles price'> ${product.precio}</Card.Text>
                     
                     {product.stock > 0 ?(
-                        <Container className="d-flex gap-3 justify-content-center" >
+                        <Container className="d-flex gap-3 justify-content-center contendorBotones" >
                         <Button className= "estiloBotones btn btn-primary-custom" onClick={() => agregarProducto(product)} > Agregar Al Carrito </Button>
                         <Button className="btn btn-secondary-custom estiloBotones" as={Link} to={`/products`}>Volver</Button>
                         </Container>

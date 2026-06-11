@@ -23,3 +23,8 @@
 .stockProducto{
     font-size: 0.6rem;
 }
+@media(max-width:480px){
+    .estiloBotonSinStock{
+        font-size: 0.4rem;
+    }
+}

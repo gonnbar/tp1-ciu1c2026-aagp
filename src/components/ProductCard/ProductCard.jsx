@@ -25,7 +25,7 @@ function ProductCard({producto}) {
       :(
         <Card.Footer className="d-flex gap-2 card border-0 bg-transparent shadow-none">
                   <p className="stockProducto accent">¡No hay mas stock de este producto!</p>
-                   <Button className="estiloBotonSinStock" style={{fontSize:"0.9rem"}}>Producto sin stock</Button>
+                   <Button className="estiloBotonSinStock" style={{fontSize:"0.9rem"}}>Producto Sin stock</Button>
                    <Button className="btn btn-secondary-custom" as={Link} to={`/products/${producto.id}`}>Ver Detalle</Button>
               </Card.Footer>
       )
