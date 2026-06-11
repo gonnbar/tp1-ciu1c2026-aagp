@@ -25,12 +25,12 @@ function App() {
 
   return (
     <>
+    <CartContext.Provider value={{ cart, ...estadoCart(cart, setCart) }}>
       <Topbar />
 
       <Navbar />
 
       <main>
-        <CartContext.Provider value={{ cart, ...estadoCart(cart, setCart) }}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
@@ -38,10 +38,10 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-        </CartContext.Provider>
       </main>
       
       <Footer />
+    </CartContext.Provider>
     </>
   );
 }

@@ -7,3 +7,48 @@
 .custom-number-inputs input[type="number"] {
   appearance: textfield;
 }
+
+.checkout-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+.checkout-card textarea {
+  min-height: 120px;
+}
+
+.checkout-card .form-label {
+  font-weight: 500;
+}
+
+.back-cart-link {
+  color: var(--color-accent) !important;
+  text-decoration: none !important;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.back-cart-link:hover {
+  color: var(--color-accent) !important;
+  text-decoration: underline !important;
+}
+
+.back-cart-link:focus,
+.back-cart-link:active {
+  color: var(--color-accent) !important;
+  box-shadow: none !important;
+}
+
+.back-cart-link svg {
+  transition: transform 0.2s ease;
+}
+
+.back-cart-link:hover svg {
+  transform: translateX(-3px);
+}

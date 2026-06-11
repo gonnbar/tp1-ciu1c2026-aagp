@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
+import { Link } from "react-router";
 import CartItem from "../../components/CartItem/CartItem";
 import { Container, Table, Button, Modal, Alert, Card } from "react-bootstrap";
 
@@ -50,8 +51,8 @@ function Cart() {
                     Total: <span className="price">${calcularTotal()}</span>
                 </h4>
           
-                <Button className="btn btn-primary-custom w-100 fw-bold" onClick={() => setShowModal(true)}>
-                    Confirmar compra
+                <Button className="btn btn-primary-custom w-100 fw-bold" as={Link} to="/contact">
+                    Finalizar compra
                 </Button>
 
                 <Button className="btn btn-secondary-custom size-sm w-100 mt-2" onClick={vaciarCarrito}>
@@ -61,22 +62,6 @@ function Cart() {
             </Card>
         </div>
 
-        <Modal show={showModal} onHide={() => setShowModal(false)} centered>
-            <Modal.Header closeButton style={{ backgroundColor: "var(--color-surface)", borderColor: "var(--color-border)" }}>
-                <Modal.Title className="page-title">Compra realizada con éxito</Modal.Title>
-            </Modal.Header>
-            
-            <Modal.Body style={{ backgroundColor: "var(--color-bg)", color: "var(--color-text)" }}>
-                <p>La orden de compra será enviada a tu email.</p>
-                <h5>Monto final: <span className="price">${calcularTotal()}</span></h5>
-            </Modal.Body>
-            
-            <Modal.Footer style={{ backgroundColor: "var(--color-surface)", borderColor: "var(--color-border)" }}>
-                <Button className="btn btn-primary-custom" onClick={() => { setShowModal(false) }}>
-                    Aceptar
-                </Button>
-            </Modal.Footer>
-        </Modal>
     </Container>
   );
 }
