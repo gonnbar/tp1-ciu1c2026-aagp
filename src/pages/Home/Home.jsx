@@ -15,11 +15,9 @@ const featuredProducts = products.slice(0, 4);
 
 function Home() {
   const navigate = useNavigate();
-
   const navegarCategoria = (categoria) => {
     navigate(`/products?category=${categoria}`)
   }
-
   return (
     <>
       <section
@@ -59,8 +57,7 @@ function Home() {
 
             <div
               className="category-card"
-              style={{ backgroundImage: `url(${cat1})` }} 
-              onClick = {() => navegarCategoria("Romance")}
+              style={{ backgroundImage: `url(${cat1})` }} onClick={()=> navegarCategoria("Romance")}
             >
               <div className="category-overlay">
                 <h4>Romance</h4>
@@ -69,8 +66,7 @@ function Home() {
 
             <div
               className="category-card"
-              style={{ backgroundImage: `url(${cat2})` }}
-              onClick = {() => navegarCategoria("Ficción")}
+              style={{ backgroundImage: `url(${cat2})` }} onClick={()=> navegarCategoria("Thriller")}
             >
               <div className="category-overlay">
                 <h4>Ficción</h4>
@@ -79,8 +75,7 @@ function Home() {
 
             <div
               className="category-card"
-              style={{ backgroundImage: `url(${cat3})` }}
-              onClick = {() => navegarCategoria("Clásicos")}
+              style={{ backgroundImage: `url(${cat3})` }} onClick={()=> navegarCategoria("Novela")}
             >
               <div className="category-overlay">
                 <h4>Clásicos</h4>
@@ -89,8 +84,7 @@ function Home() {
 
             <div
               className="category-card"
-              style={{ backgroundImage: `url(${cat4})` }}
-              onClick = {() => navegarCategoria("Fantasía")}
+              style={{ backgroundImage: `url(${cat4})` }} onClick={()=> navegarCategoria("Fantasia")}
             >
               <div className="category-overlay">
                 <h4>Fantasía</h4>
