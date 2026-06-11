@@ -20,7 +20,8 @@ export const products = [
         categoria: "Ficción",
         precio: 17900,
         stock: 2,
-        imagen: orwellImg
+        imagen: orwellImg,
+        etiqueta: "Oferta!"
     },
     {
         id: 2,
@@ -41,6 +42,7 @@ export const products = [
         imagen: acotar,
         descripcion: "Cuando la cazadora de diecinueve años Feyre mata a un lobo en el bosque, una criatura bestial irrumpe en su casa para exigir una retribución. Trasladada a una tierra mágica y engañosa que solo conoce a través de leyendas, Feyre descubre que su captor no es un animal, sino Tamlin: una criatura inmortal y letal que alguna vez reinó en su mundo. Mientras Feyre vive en su castillo, lo que siente por Tamlin muta de una hostilidad helada a una pasión ardiente y feroz, a pesar de todas las mentiras y advertencias a las que queda expuesta en ese mundo fantástico, bello y peligroso. No obstante, una vil sombra ancestral sobre la tierra de los inmortales crece día a día, y Feyre debe encontrar la forma de detenerla... o condenar a Tamlin –y a su mundo" ,
         stock: 4,
+        etiqueta: "Última novedad"
     },
      {
         id:4 ,
