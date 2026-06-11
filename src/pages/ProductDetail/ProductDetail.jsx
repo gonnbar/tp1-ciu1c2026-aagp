@@ -2,33 +2,43 @@ import { Link, useParams } from 'react-router';
 import {products} from '../../data/products';
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import './ProductDetail.css'
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
+/*
+    BUSCAR UNA MANERA DE PONER LOS TEXTOS PARA VISUALIZAR PRODUCTOS
+    - <Card.Text className='stockProducto accent'>¡No hay mas stock de este producto!</Card.Text>
+    - <Card.Text className='stockProducto accent'>¡Solo quedan {product.stock} en stock!</Card.Text>
+*/
 function ProductDetail() {
    const {id} = useParams();
+   const {agregarProducto} = useContext(CartContext)
    const product = products.find((p) => p.id == id);
    return(
-        <Card className="mb-3">
+        <div className = 'contenedorCard'>
+        <Card className="mb-3 estiloDetalle">
             <Row className = 'g-0'>
                 <Col md= {4}>
-                <Card.Img src={product.imagen} className="h-100"style={{}}></Card.Img>
+                <Card.Img className= 'estiloImagen' src={product.imagen}></Card.Img>
                 </Col>
                 <Col md={8}>
                     <Card.Body>
-                       <Card.Title style={{fontSize:'2.5rem',textAlign:'center'}}>{product.nombre} - {product.autor}</Card.Title>
+                       <Card.Title style={{fontSize:'2rem',textAlign:'center'}}>{product.nombre} - {product.autor}</Card.Title>
                        <Card.Text className='precioDetalles'> ${product.precio}</Card.Text>
                     
                     {product.stock > 0 ?(
-                        <Card.Text className='stockProducto accent'>¡Solo quedan {product.stock} en stock!</Card.Text>
-                    )
-                    :
-                    (
-                        <Card.Text className='stockProducto accent'>¡No hay mas stock de este producto!</Card.Text>
-                    )}
-                        <Container className="d-flex gap-3 justify-content-center">
-                        <Button className= "buttonSinStock estiloBotones"> Sin Stock </Button>
+                        <Container className="d-flex gap-3 justify-content-center" >
+                        <Button className= "estiloBotones btn btn-primary-custom" onClick={() => agregarProducto(product)} > Agregar Al Carrito </Button>
                         <Button className="btn btn-secondary-custom estiloBotones" as={Link} to={`/products`}>Volver</Button>
                         </Container>
-
+                    )
+                    :
+                    (   
+                        <Container className="d-flex gap-3 justify-content-center">
+                            <Button className= "buttonSinStock estiloBotones"> Sin Stock </Button>
+                            <Button className="btn btn-secondary-custom estiloBotones" as={Link} to={`/products`}>Volver</Button>
+                        </Container>
+                    )}
                        <div className='contenedorSinopsis'>
                         <h3>Sinopsis</h3>
                         <p className='productoDescripcion'>{product.descripcion}</p>
@@ -37,6 +47,7 @@ function ProductDetail() {
                 </Col>
             </Row>
         </Card>
+    </div>
     );
 }
 export default ProductDetail;

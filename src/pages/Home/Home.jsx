@@ -14,6 +14,9 @@ import "./Home.css";
 
 function Home() {
   const navigate = useNavigate();
+  const navegarCategoria = (categoria) => {
+    navigate(`/products?category=${categoria}`)
+  }
 
   return (
     <>
@@ -54,16 +57,16 @@ function Home() {
 
             <div
               className="category-card"
-              style={{ backgroundImage: `url(${cat1})` }}
+              style={{ backgroundImage: `url(${cat1})` }} onClick={()=> navegarCategoria("Romance")}
             >
               <div className="category-overlay">
-                <h4>Novelas</h4>
+                <h4>Romance</h4>
               </div>
             </div>
 
             <div
               className="category-card"
-              style={{ backgroundImage: `url(${cat2})` }}
+              style={{ backgroundImage: `url(${cat2})` }} onClick={()=> navegarCategoria("Thriller")}
             >
               <div className="category-overlay">
                 <h4>Ficción</h4>
@@ -72,7 +75,7 @@ function Home() {
 
             <div
               className="category-card"
-              style={{ backgroundImage: `url(${cat3})` }}
+              style={{ backgroundImage: `url(${cat3})` }} onClick={()=> navegarCategoria("Novela")}
             >
               <div className="category-overlay">
                 <h4>Clásicos</h4>
@@ -81,7 +84,7 @@ function Home() {
 
             <div
               className="category-card"
-              style={{ backgroundImage: `url(${cat4})` }}
+              style={{ backgroundImage: `url(${cat4})` }} onClick={()=> navegarCategoria("Fantasia")}
             >
               <div className="category-overlay">
                 <h4>Fantasía</h4>
