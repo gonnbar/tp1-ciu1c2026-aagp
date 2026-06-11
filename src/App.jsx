@@ -8,21 +8,20 @@ import Products from "./pages/Products/Products";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import Cart from "./pages/Cart/Cart";
 import Contact from "./pages/Contact/Contact";
-import About from "./pages/About/About";
 
-// carrito
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CartContext, estadoCart } from "./context/CartContext";
-// PRUEBA CARRITO
-//import { products } from "./data/products.js";
-
 
 function App() {
-  //carrito
-  const [cart, setCart] = useState([
-  // PRUEBA CARRITO { ...products[0], cantidad: 1 }, 
-  //{ ...products[1], cantidad: 1 } 
-  ]);
+
+  const [cart, setCart] = useState( () => {
+    const carritoGuardado = localStorage.getItem("carritoItems")
+    return carritoGuardado ? JSON.parse(carritoGuardado) : [];
+  });
+
+  useEffect( () => {
+    localStorage.setItem("carritoItems", JSON.stringify(cart))
+  }, [cart]);
 
   return (
     <>
@@ -38,17 +37,8 @@ function App() {
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/about" element={<About />} />
           </Routes>
         </CartContext.Provider>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/products/:id" element={<ProductDetail />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
       </main>
       
       <Footer />
