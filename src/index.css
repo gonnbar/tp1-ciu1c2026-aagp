@@ -1,0 +1,247 @@
+:root {
+
+  /* Colores principales */
+
+  --color-bg: #F5F1E8;
+  --color-surface: #FAF9F6;
+
+  --color-navbar: #FAF9F6;
+  --color-footer: #FAF9F6;
+
+  --color-text: #111111;
+
+  --color-accent: #C89B3C;
+
+  --color-border: #D9D9D9;
+
+  --color-disabled: #B5B5B5;
+
+  /* Botones */
+
+  --color-primary: #111111;
+  --color-primary-hover: #C89B3C;
+
+  /* Cards */
+
+  --color-card: #FAF9F6;
+
+  /* Sombras */
+
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+  /* Bordes */
+
+  --radius-md: 12px;
+  --radius-lg: 18px;
+
+  /* Transiciones */
+
+  --transition-fast: 0.2s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+}
+
+/* ---------- Tipografías ---------- */
+
+.page-title,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+  color: var(--color-text);
+}
+
+h1 {
+  text-align: center;
+}
+
+/* ---------- Imágenes ---------- */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- Utilidades ---------- */
+
+.primary {
+  color: var(--color-primary);
+}
+
+.accent {
+  color: var(--color-accent);
+}
+
+.disabled {
+  color: var(--color-disabled);
+}
+
+.price {
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* ---------- Botón principal ---------- */
+
+.btn.btn-primary-custom {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: white !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn.btn-primary-custom:hover,
+.btn.btn-primary-custom:focus,
+.btn.btn-primary-custom:active {
+  background-color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  color: var(--color-text) !important;
+  box-shadow: none !important;
+}
+
+/* ---------- Botón secundario ---------- */
+
+.btn.btn-secondary-custom {
+  background-color: transparent !important;
+  border: 1px solid var(--color-accent) !important;
+  color: var(--color-accent) !important;
+  transition: var(--transition-fast);
+}
+
+.btn.btn-secondary-custom:hover {
+  background-color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  color: var(--color-text) !important;
+}
+
+.btn.btn-secondary-custom:focus,
+.btn.btn-secondary-custom:active {
+  box-shadow: none !important;
+}
+
+/* ---------- Botones deshabilitados ---------- */
+
+.btn:disabled,
+.btn.disabled {
+  background-color: var(--color-disabled) !important;
+  border-color: var(--color-disabled) !important;
+  color: white !important;
+  opacity: 0.75 !important;
+  cursor: not-allowed !important;
+}
+
+/* ---------- Links ---------- */
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* ---------- Listas ---------- */
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Selección ---------- */
+
+::selection {
+  background: var(--color-accent);
+  color: white;
+}
+
+/* ---------- Cards ---------- */
+
+.custom-card {
+  background-color: var(--color-card) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-fast);
+}
+
+.custom-card:hover {
+  transform: translateY(-3px);
+}
+
+/* ---------- Layout ---------- */
+
+.page-container {
+  padding: 2rem 1rem;
+}
+
+.section-spacing {
+  margin: 3rem 0;
+}
+
+/* ---------- Inputs ---------- */
+
+.form-control,
+.form-select {
+  border-color: var(--color-border);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 0.15rem rgba(200, 155, 60, 0.25);
+}
+
+/* ---------- Scroll ---------- */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b1872f;
+}

@@ -1,0 +1,90 @@
+.custom-navbar {
+  position: sticky !important;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--color-navbar);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+}
+
+.custom-navbar .nav-link,
+.custom-navbar .navbar-brand {
+  color: var(--color-text) !important;
+}
+
+.custom-navbar .nav-link:hover {
+  color: var(--color-accent) !important;
+}
+
+.custom-navbar .nav-link.active {
+  color: var(--color-accent) !important;
+  font-weight: 600;
+}
+
+.navbar-logo {
+  height: 60px;
+  width: auto;
+}
+
+.cart-icon {
+  font-size: 1.4rem;
+}
+
+.cart-icon:hover {
+  transform: translateY(-3px);
+}
+
+.cart-icon:active {
+  transform: scale(0.9);
+}
+
+/* badge carrito */
+
+.cart-link {
+  position: relative;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -3px;
+  right: -7px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+/* responsive */
+
+@media (max-width: 991px) {
+  
+  .custom-navbar .nav {
+    width: 100%;
+    gap: 0;
+  }
+
+  .custom-navbar .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 0;
+  }
+
+  .cart-link {
+    justify-content: flex-start;
+  }
+
+  .cart-badge {
+    position: static;
+    margin-left: 0.5rem;
+  }
+}
