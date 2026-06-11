@@ -1,16 +1,73 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![logo](src/assets/logo/logo.png)
+## Descripción
 
-Currently, two official plugins are available:
+Tinta & Papel es una tienda online de libros creada con el objetivo de acercar grandes historias a nuevos lectores. La plataforma ofrece un catálogo que incluye desde clásicos inolvidables hasta novedades literarias, permitiendo explorar, buscar y filtrar libros según diferentes criterios. Además, incorpora funcionalidades de carrito de compras, visualización de detalles de productos y un proceso de checkout con validaciones, brindando una experiencia de compra simple e intuitiva.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tecnologías Utilizadas
 
-## React Compiler
+* React 19
+* React DOM
+* React Router
+* React Bootstrap
+* Bootstrap 5
+* React Icons
+* Vite
+* JavaScript (ES6+)
+* HTML5
+* CSS3
+* ESLint
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Instalación y Ejecución
 
-## Expanding the ESLint configuration
+1. Clonar el repositorio:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone https://github.com/gonnbar/tp1-ciu1c2026-aagp.git
+```
+
+2. Ingresar al directorio del proyecto:
+
+```bash
+cd tp1-ciu1c2026-aagp
+```
+
+3. Instalar las dependencias:
+
+```bash
+npm i
+```
+
+4. Ejecutar el proyecto en modo desarrollo:
+
+```bash
+npm run dev
+```
+
+5. Abrir en el navegador la siguiente URL
+```bash
+ http://localhost:5173
+```
+
+## Funcionalidades
+
+* Visualización del catálogo de libros.
+* Vista detallada de cada producto.
+* Búsqueda de productos por nombre.
+* Filtros por categoría, stock y precio.
+* Carrito de compras.
+* Formulario de checkout con validaciones.
+* Confirmación de compra mediante modal.
+
+## Screenshots
+
+
+
+## Integrantes
+
+| Nombre | GitHub |
+|------------|---------|
+| Avila, Paz Maria | https://github.com/pazm-avila |
+| Barbosa, Gonzalo Nicolas | https://github.com/gonnbar |
+| Peralta, Melanie Ailen | https://github.com/ailenperalta |
+| Rodriguez, Ana Paula | https://github.com/anapauula1 |
