@@ -1,4 +1,4 @@
-import { Button, Container, Row, Col } from "react-bootstrap";
+import { Button, Container, Row, Col, Badge } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import { BsArrowRight } from "react-icons/bs";
 import banner from "../../assets/img/banner.jpg";
@@ -7,13 +7,18 @@ import cat1 from "../../assets/img/cat1.jpg";
 import cat2 from "../../assets/img/cat2.jpg";
 import cat3 from "../../assets/img/cat3.jpg";
 import cat4 from "../../assets/img/cat4.jpg";
-import d1 from "../../assets/img/rayuela-cortazar.jpg";
-import d2 from "../../assets/img/1984-g-orwell.jpg";
-import d3 from "../../assets/img/principeCruel.jpg";
 import "./Home.css";
+import ProductCard from "../../components/ProductCard/ProductCard";
+import { products } from "../../data/products";
+
+const featuredProducts = products.slice(0, 4);
 
 function Home() {
   const navigate = useNavigate();
+  const navegarCategoria = (categoria) => {
+    navigate(`/products?category=${categoria}`)
+  }
+
   const navegarCategoria = (categoria) => {
     navigate(`/products?category=${categoria}`)
   }
@@ -106,26 +111,20 @@ function Home() {
             <hr className="title-divider" />
           </div>
 
-          <div className="featured-placeholder">
-
-            {/* reemplazar por ProductCards */}
-
-            <div className="book-placeholder custom-card">
-              Libro destacado
-            </div>
-
-            <div className="book-placeholder custom-card">
-              Libro destacado
-            </div>
-
-            <div className="book-placeholder custom-card">
-              Libro destacado
-            </div>
-
-            <div className="book-placeholder custom-card">
-              Libro destacado
-            </div>
-
+          <div className="featured-grid">
+            {featuredProducts.map(producto => (
+              <div key={producto.id} className="featured-item position-relative">
+                {producto.etiqueta && (
+                  <Badge
+                    bg={producto.etiqueta.toLowerCase() === "oferta!" ? "danger" : "primary"}
+                    className="featured-badge"
+                  >
+                    {producto.etiqueta}
+                  </Badge>
+                )}
+                <ProductCard producto={producto} />
+              </div>
+            ))}
           </div>
 
         </Container>
@@ -136,13 +135,13 @@ function Home() {
 
         <Container>
 
-          <Row className="align-items-center">
+          <Row className="align-items-center gx-5">
 
             <Col lg={6}>
               <div className="about-text">
                 <h2>Más que una librería</h2>
                 <p>
-                  Tinta & Papel nació con la idea de acercar grandes historias a nuevos lectores. Desde clásicos inolvidables hasta las últimas novedades, seleccionamos libros para quienes disfrutan descubrir nuevos mundos, aprender algo diferente o simplemente encontrar un momento para desconectarse y gozar de una buena lectura.
+                  <strong>Tinta & Papel</strong> nació con la idea de acercar grandes historias a nuevos lectores. Desde clásicos inolvidables hasta las últimas novedades, seleccionamos libros para quienes disfrutan descubrir nuevos mundos, aprender algo diferente o simplemente encontrar un momento para desconectarse y gozar de una buena lectura.
                 </p>
               </div>
             </Col>
