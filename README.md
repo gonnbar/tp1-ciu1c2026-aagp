@@ -59,6 +59,33 @@ npm run dev
 * Formulario de checkout con validaciones.
 * Confirmación de compra mediante modal.
 
+## Estructura
+
+```text
+src
+├── assets
+│   ├── img
+│   └── logo
+├── components
+│   ├── CartItem
+│   ├── CheckoutForm
+│   ├── Filters
+│   ├── Footer
+│   ├── Navbar
+│   ├── ProductCard
+│   ├── SearchBar
+│   └── Topbar
+├── context
+├── data
+└── pages
+    ├── About
+    ├── Cart
+    ├── Contact
+    ├── Home
+    ├── ProductDetail
+    └── Products
+```
+
 ## Screenshots
 
 
