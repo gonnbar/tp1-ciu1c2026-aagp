@@ -69,7 +69,7 @@ function Home() {
               style={{ backgroundImage: `url(${cat2})` }} onClick={()=> navegarCategoria("Thriller")}
             >
               <div className="category-overlay">
-                <h4>Ficción</h4>
+                <h4>Thriller</h4>
               </div>
             </div>
 

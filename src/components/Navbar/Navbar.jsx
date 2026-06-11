@@ -24,14 +24,6 @@ function NavBar() {
 
         <Navbar.Collapse>
 
-          <div className="navbar-search">
-            <BsSearch className="search-icon" />
-            <input
-              type="text"
-              placeholder="Buscar..."
-            />
-          </div>
-
           <Nav className="ms-auto">
 
             <NavLink to="/products" className="nav-link">

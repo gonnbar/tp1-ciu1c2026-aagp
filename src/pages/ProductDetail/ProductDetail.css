@@ -1,66 +1,74 @@
-.subtitulo{
+.subtitulo {
     text-align: center;
 }
-.contenedorSinopsis{
+
+.contenedorSinopsis {
     margin: 1rem;
     padding: 1rem;
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgba(0, 0, 0, 0.05);
     border-radius: 8px;
 }
-.estiloBotones{
-    width: 30% !important;
-    padding: 0.25rem 0.5rem;
+
+.estiloBotones {
+    min-width: 180px;
+    padding: 0.5rem 1rem;
     margin-top: 1rem;
     font-size: 0.9rem;
     line-height: 1.2;
 }
-.precioDetalles{
+
+.precioDetalles {
     text-align: center;
-    padding: 1rem;    
+    padding: 1rem;
 }
-.stockProducto{
-    text-align: center;
-}
-.buttonSinStock{
+
+.buttonSinStock {
     background-color: gray !important;
     border-color: gray !important;
     cursor: not-allowed !important;
 }
-.estiloDetalle{
+
+.estiloDetalle {
     margin: 2rem;
     max-width: 900px;
     background-color: transparent !important;
     border: none !important;
-    box-shadow: none !important; 
+    box-shadow: none !important;
 }
-.card-body{
+
+.estiloDetalle .card-body {
     padding: 1rem;
 }
-.productoDescripcion{
+
+.productoDescripcion {
     max-height: 300px;
-    overflow-y: auto; 
-    font-size: 0.7rem;
-    line-height: 1.4;
+    overflow-y: auto;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
-.estiloImagen{
-    max-height: 450px; 
+
+.estiloImagen {
+    max-height: 450px;
     width: 100%;
     object-fit: contain;
 }
-@media(max-width: 768px){
-    .estiloBotonesSinStock{
+
+@media(max-width: 768px) {
+    .estiloBotonesSinStock {
         font-size: 0.8rem;
         width: 100%;
     }
+
     .contenedorBotones {
-        flex-direction: column; 
-        gap: 0.5rem;            
-  }
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 }
-@media(max-width:480px){
+
+@media(max-width:480px) {
     .estiloBotones {
-    width: 100% !important;
-    font-size: 0.8rem;
-    padding: 0.4rem;
-  }
+        width: 100% !important;
+        font-size: 0.8rem;
+        padding: 0.4rem;
+    }
 }
