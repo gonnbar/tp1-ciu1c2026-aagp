@@ -18,11 +18,6 @@ function Home() {
   const navegarCategoria = (categoria) => {
     navigate(`/products?category=${categoria}`)
   }
-
-  const navegarCategoria = (categoria) => {
-    navigate(`/products?category=${categoria}`)
-  }
-
   return (
     <>
       <section
