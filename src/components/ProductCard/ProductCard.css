@@ -23,6 +23,7 @@
 .stockProducto{
     font-size: 0.6rem;
 }
+/* para que el boton no se vea tan grande*/
 @media(max-width:480px){
     .estiloBotonSinStock{
         font-size: 0.4rem;
