@@ -61,7 +61,7 @@ function Contact() {
 
   return (
     <>
-      <Form onSubmit={handleSubmit}>
+      <Form noValidate onSubmit={handleSubmit} className="page-container">
 
         <Form.Group className="mb-3">
           <Form.Label>Nombre</Form.Label>
@@ -142,6 +142,7 @@ function Contact() {
           </Button>
         </Modal.Footer>
       </Modal>
+
     </>
 
   );

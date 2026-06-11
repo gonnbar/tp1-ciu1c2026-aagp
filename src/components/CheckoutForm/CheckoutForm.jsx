@@ -1,10 +1,18 @@
 import { useState } from "react";
 
+import { CartContext } from "../../context/CartContext";
+
+import { useContext } from "react";
+
 import Form from "react-bootstrap/Form"
 
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 
+import Alert from "react-bootstrap/Alert";
+import { Container } from "react-bootstrap";
+
+import "./CheckoutForm.css"
 
 function CheckoutForm() {
   const [formData, setFormData] = useState({
@@ -25,6 +33,8 @@ function CheckoutForm() {
   const [errors, setErrors] = useState({})
 
   const [showModal, setShowModal] = useState(false)
+  
+  const { cart } = useContext(CartContext)
 
   const handleChange = (e) => {
     setFormData({
@@ -43,7 +53,7 @@ function CheckoutForm() {
     }
 
     if (!formData.apellido.trim()) {
-      errores.nombre = "El apellido es obligatorio";
+      errores.apellido = "El apellido es obligatorio";
     }
 
     if (!formData.email.trim()) {
@@ -73,6 +83,12 @@ function CheckoutForm() {
       errores.email = "Email inválido";
     }
 
+    if(
+      cart.length === 0      
+    ){
+      errores.carrito = "El carrito esta vacio"
+    }
+
     setErrors(errores);
 
     if (Object.keys(errores).length > 0) {
@@ -85,7 +101,8 @@ function CheckoutForm() {
   return (
 
     <>
-      <Form onSubmit={handleSubmit}>
+    <Container className="page-container custom-number-inputs">
+      <Form noValidate onSubmit={handleSubmit}>
         <Form.Group>
           <Form.Label> Nombre </Form.Label>
           <Form.Control
@@ -279,6 +296,12 @@ function CheckoutForm() {
           />
         </Form.Group>
 
+        {errors.carrito && (
+            <Alert variant="danger">
+              {errors.carrito}
+            </Alert>
+        )}
+
         <Button
           variant="success"
           type="submit"
@@ -312,6 +335,7 @@ function CheckoutForm() {
         </Modal.Footer>
       </Modal>
 
+    </Container>
     </>
   )
 }
