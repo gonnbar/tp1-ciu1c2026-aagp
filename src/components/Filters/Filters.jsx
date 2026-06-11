@@ -63,7 +63,7 @@ function Filters({
 //  ];
 // /  const [category, setCategory] = useState("");
 //
-//   const [stockMin, setStockMin] = useState("");
+//   const [category, setCategory] = useState("");
 //
 //   const [priceMin, setPriceMin] = useState("");
 //
@@ -86,9 +86,9 @@ function Filters({
 //       category === "" ||
 //       producto.categoria === category;
 //
-//     const coincideStock =
-//       stockMin === "" ||
-//       producto.stock >= Number(stockMin);
+  //     const coincideStock =
+  //       stockMin === "" ||
+  //       producto.stock >= Number(stockMin);
 //
 //     const coincidePrecio =
 //       (priceMin === "" ||producto.precio >= Number(priceMin)) &&
